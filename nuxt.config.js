@@ -25,7 +25,8 @@ export default {
    */
   css: [
     // SCSS file in the project.
-    '@/assets/css/variables.scss'
+    '@/assets/css/variables.scss',
+    '@/assets/css/colors.scss'
   ],
   /*
    ** Plugins to load before mounting the App
@@ -52,5 +53,8 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  dir: {
+    utils: 'utils'
   }
 }

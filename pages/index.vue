@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <logo />
+      <Header />
       <h1 class="title">
         steam-nuxt
       </h1>
@@ -25,11 +25,11 @@
 </template>
 
 <script>
-import Logo from '~/components/logo.vue'
+import Header from '~/components/header'
 
 export default {
   components: {
-    Logo
+    Header
   }
 }
 </script>
