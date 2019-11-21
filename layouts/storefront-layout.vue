@@ -14,3 +14,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.storefront-layout {
+  background-color: $color-charcoal;
+}
+</style>

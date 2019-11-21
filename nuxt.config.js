@@ -19,7 +19,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#000' },
   /*
    ** Global CSS
    */
@@ -31,7 +31,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: '~/plugins/vue2-siema.js', ssr: false }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -44,7 +44,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa', '@nuxtjs/style-resources', 'nuxt-purgecss'],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/style-resources'],
   styleResources: {
     scss: ['assets/css/colors.scss', 'assets/css/variables.scss']
   },
