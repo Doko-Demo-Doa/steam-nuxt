@@ -44,7 +44,10 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa'],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/style-resources', 'nuxt-purgecss'],
+  styleResources: {
+    scss: ['assets/css/colors.scss', 'assets/css/variables.scss']
+  },
   /*
    ** Build configuration
    */
@@ -52,6 +55,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    extractCSS: true,
     extend(config, ctx) {}
   },
   dir: {

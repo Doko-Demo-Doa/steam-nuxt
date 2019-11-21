@@ -25,12 +25,8 @@
 </template>
 
 <script>
-import Header from '~/components/header'
-
 export default {
-  components: {
-    Header
-  }
+  layout: 'storefront-layout'
 }
 </script>
 
