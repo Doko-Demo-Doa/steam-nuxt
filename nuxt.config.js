@@ -46,7 +46,11 @@ export default {
    */
   modules: ['@nuxtjs/pwa', '@nuxtjs/style-resources'],
   styleResources: {
-    scss: ['assets/css/colors.scss', 'assets/css/variables.scss']
+    scss: [
+      'assets/css/colors.scss',
+      'assets/css/variables.scss',
+      'assets/css/common.scss'
+    ]
   },
   /*
    ** Build configuration
@@ -56,7 +60,17 @@ export default {
      ** You can extend webpack config here
      */
     extractCSS: true,
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+    }
   },
   dir: {
     utils: 'utils'

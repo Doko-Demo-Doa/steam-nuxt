@@ -1,13 +1,27 @@
 <template>
-  <siema :options="flickityOptions" class="custom-slide">
-    <div
-      v-for="item in carouselData"
-      v-bind:key="item.id"
-      class="carousel-cell"
+  <div class="featured-apps block md:flex md:w-full lg:3/4 xl:w-2/3 mx-auto">
+    <siema
+      :options="flickityOptions"
+      class="custom-slide w-3/4 sm:w-full md:w-full mx-auto"
     >
-      <img v-bind:src="item.imageLink" />
+      <div
+        v-for="item in carouselData"
+        v-bind:key="item.id"
+        class="carousel-cell"
+      >
+        <img v-bind:src="item.imageLink" />
+      </div>
+    </siema>
+
+    <div class="slide-meta">
+      <div>Test</div>
+      <div>
+        Red Dead Redemption 2, the critically acclaimed open world epic from
+        Rockstar Games and the highest rated game of the console generation, now
+        enhanced for PC with new Story Mode content, visual upgrades and more.
+      </div>
     </div>
-  </siema>
+  </div>
 </template>
 
 <script>
@@ -43,8 +57,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.custom-slide {
-  width: 400px;
-  height: 300px;
+.featured-apps {
+  .custom-slide {
+    max-width: 600px;
+    max-height: 337px;
+    min-width: 400px;
+  }
+
+  .slide-meta {
+    padding: 16px;
+  }
 }
 </style>
