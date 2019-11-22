@@ -44,7 +44,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa', '@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/style-resources', 'nuxt-webfontloader'],
   styleResources: {
     scss: [
       'assets/css/colors.scss',
@@ -70,6 +70,11 @@ export default {
           exclude: /(node_modules)/
         })
       }
+    }
+  },
+  webfontloader: {
+    google: {
+      families: ['Google+Sans:400,700']
     }
   },
   dir: {

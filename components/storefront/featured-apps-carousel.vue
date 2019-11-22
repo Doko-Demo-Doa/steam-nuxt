@@ -1,25 +1,30 @@
 <template>
-  <div class="featured-apps block md:flex md:w-full lg:3/4 xl:w-2/3 mx-auto">
-    <siema
-      :options="flickityOptions"
-      class="custom-slide w-3/4 sm:w-full md:w-full mx-auto"
-    >
-      <div
-        v-for="item in carouselData"
-        v-bind:key="item.id"
-        class="carousel-cell"
-      >
-        <img v-bind:src="item.imageLink" />
-      </div>
-    </siema>
+  <div
+    class="featured-apps flex flex-col lg:flex-row items-center lg:justify-center"
+  >
+    <div class="custom-slide">
+      <siema :options="flickityOptions">
+        <div
+          v-for="item in carouselData"
+          v-bind:key="item.id"
+          class="carousel-cell"
+        >
+          <img v-bind:src="item.imageLink" />
+        </div>
+      </siema>
+    </div>
 
-    <div class="slide-meta">
-      <div>Test</div>
+    <div class="slide-meta flex flex-row lg:flex-col w-px375 md:w-10/12">
       <div>
-        Red Dead Redemption 2, the critically acclaimed open world epic from
-        Rockstar Games and the highest rated game of the console generation, now
-        enhanced for PC with new Story Mode content, visual upgrades and more.
+        <div class="game-title">Red Dead Redemption 2</div>
+        <div class="game-description">
+          Red Dead Redemption 2, the critically acclaimed open world epic from
+          Rockstar Games and the highest rated game of the console generation,
+          now enhanced for PC with new Story Mode content, visual upgrades and
+          more.
+        </div>
       </div>
+      <div class="button buy-now">Buy now</div>
     </div>
   </div>
 </template>
@@ -58,6 +63,9 @@ export default {
 
 <style lang="scss" scoped>
 .featured-apps {
+  min-height: 420px;
+  padding-top: 16px;
+
   .custom-slide {
     max-width: 600px;
     max-height: 337px;
@@ -65,7 +73,22 @@ export default {
   }
 
   .slide-meta {
-    padding: 16px;
+    padding: 26px;
+    width: 400px;
+    color: white;
+    text-align: left;
+
+    .game-title {
+      font-size: 27px;
+      font-family: 'Google Sans';
+      font-weight: bold;
+      margin-bottom: 28px;
+    }
+
+    .game-description {
+      font-size: 14px;
+      font-family: 'Google Sans';
+    }
   }
 }
 </style>
