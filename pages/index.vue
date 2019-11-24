@@ -1,16 +1,19 @@
 <template>
   <div class="storefront-container">
     <FeaturedAppCarousel />
+    <SpecialOffers />
   </div>
 </template>
 
 <script>
 import FeaturedAppCarousel from '~/components/storefront/featured-apps-carousel'
+import SpecialOffers from '~/components/storefront/special-offers'
 
 export default {
   layout: 'storefront-layout',
   components: {
-    FeaturedAppCarousel
+    FeaturedAppCarousel,
+    SpecialOffers
   }
 }
 </script>

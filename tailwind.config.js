@@ -10,6 +10,9 @@ module.exports = {
       black: '#171a21'
     }
   },
-  variants: {},
+  // This section is for pseudo-class variants: https://tailwindcss.com/docs/pseudo-class-variants
+  variants: {
+    backgroundColor: ['responsive', 'hover', 'focus']
+  },
   plugins: []
 }

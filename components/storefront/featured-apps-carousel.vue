@@ -14,7 +14,9 @@
       </siema>
     </div>
 
-    <div class="slide-meta flex flex-row lg:flex-col w-px375 md:w-10/12">
+    <div
+      class="slide-meta flex flex-row lg:flex-col w-px375 md:w-10/12 hover:bg-blue-500"
+    >
       <div>
         <div class="game-title">Red Dead Redemption 2</div>
         <div class="game-description">
@@ -24,7 +26,10 @@
           more.
         </div>
       </div>
-      <div class="button buy-now">Buy now</div>
+
+      <button class="my-4 py-4 btn-buy bg-transparent rounded">
+        See Details
+      </button>
     </div>
   </div>
 </template>
@@ -33,6 +38,8 @@
 // https://sainf.github.io/vue2siema/
 const imageLink =
   'https://steamcdn-a.akamaihd.net/steam/apps/883710/ss_153bd5afa0b45e74b0242a3805dc29aab9f1685e.600x338.jpg?t=1556224097'
+const imageLink2 =
+  'https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fred-dead-redemption-2%2Fspecial-edition%2FRDR2PC1339_EditionOverview_PC_Stadia_SE_V02-1920x1080-e67610cc2943654bab80d751fcf88a64dabc1b1a.jpg'
 export default {
   data() {
     return {
@@ -44,7 +51,7 @@ export default {
       },
       carouselData: [
         { id: 0, imageLink },
-        { id: 1, imageLink },
+        { id: 1, imageLink: imageLink2 },
         { id: 2, imageLink }
       ]
     }
@@ -88,6 +95,14 @@ export default {
     .game-description {
       font-size: 14px;
       font-family: 'Google Sans';
+    }
+
+    .btn-buy {
+      background-color: $color-green-leaf;
+
+      &:hover {
+        background-color: $color-green-semidark;
+      }
     }
   }
 }
