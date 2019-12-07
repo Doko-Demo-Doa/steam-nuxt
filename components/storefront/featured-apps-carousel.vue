@@ -2,7 +2,7 @@
   <div
     class="featured-apps flex flex-col lg:flex-row items-center lg:justify-center"
   >
-    <div class="custom-slide">
+    <div class="custom-slide w-full">
       <siema :options="flickityOptions">
         <div v-for="item in carouselData" :key="item.id" class="carousel-cell">
           <img :src="item.imageLink" />
@@ -10,9 +10,7 @@
       </siema>
     </div>
 
-    <div
-      class="slide-meta flex flex-row lg:flex-col w-px375 md:w-10/12 hover:bg-blue-500"
-    >
+    <div class="slide-meta flex flex-col lg:w-auto hover:bg-blue-500">
       <div>
         <div class="game-title">Red Dead Redemption 2</div>
         <div class="game-description">
@@ -24,7 +22,7 @@
       </div>
 
       <button class="my-4 py-4 btn-buy bg-transparent rounded">
-        See Details
+        Buy Now
       </button>
     </div>
   </div>

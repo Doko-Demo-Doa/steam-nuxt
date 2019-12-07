@@ -5,8 +5,20 @@
       class="logo object-center"
       src="@/assets/images/header-logo.png"
     />
+    <TopMenuBar />
   </div>
 </template>
+
+<script>
+import TopMenuBar from '~/components/common/top-menu-bar'
+
+export default {
+  components: {
+    TopMenuBar
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 .header-main {
   background-color: $color-dark;
