@@ -4,12 +4,8 @@
   >
     <div class="custom-slide">
       <siema :options="flickityOptions">
-        <div
-          v-for="item in carouselData"
-          v-bind:key="item.id"
-          class="carousel-cell"
-        >
-          <img v-bind:src="item.imageLink" />
+        <div v-for="item in carouselData" :key="item.id" class="carousel-cell">
+          <img :src="item.imageLink" />
         </div>
       </siema>
     </div>
