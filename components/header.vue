@@ -14,8 +14,8 @@ import TopMenuBar from '~/components/common/top-menu-bar'
 
 export default {
   components: {
-    TopMenuBar
-  }
+    TopMenuBar,
+  },
 }
 </script>
 

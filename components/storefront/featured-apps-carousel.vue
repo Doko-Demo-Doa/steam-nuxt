@@ -41,13 +41,13 @@ export default {
         initialIndex: 3,
         prevNextButtons: false,
         pageDots: false,
-        wrapAround: true
+        wrapAround: true,
       },
       carouselData: [
         { id: 0, imageLink },
         { id: 1, imageLink: imageLink2 },
-        { id: 2, imageLink }
-      ]
+        { id: 2, imageLink },
+      ],
     }
   },
   methods: {
@@ -57,8 +57,8 @@ export default {
 
     previous() {
       this.$refs.flickity.previous()
-    }
-  }
+    },
+  },
 }
 </script>
 

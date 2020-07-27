@@ -15,10 +15,10 @@ export default {
         { name: 'Community', id: 1 },
         { name: 'Profile', id: 2 },
         { name: 'Chat', id: 3 },
-        { name: 'Support', id: 4 }
-      ]
+        { name: 'Support', id: 4 },
+      ],
     }
-  }
+  },
 }
 </script>
 

@@ -7,12 +7,12 @@
 module.exports = {
   theme: {
     colors: {
-      black: '#171a21'
-    }
+      black: '#171a21',
+    },
   },
   // This section is for pseudo-class variants: https://tailwindcss.com/docs/pseudo-class-variants
   variants: {
-    backgroundColor: ['responsive', 'hover', 'focus']
+    backgroundColor: ['responsive', 'hover', 'focus'],
   },
-  plugins: []
+  plugins: [],
 }

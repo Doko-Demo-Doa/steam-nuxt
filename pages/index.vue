@@ -13,8 +13,8 @@ export default {
   layout: 'storefront-layout',
   components: {
     FeaturedAppCarousel,
-    SpecialOffers
-  }
+    SpecialOffers,
+  },
 }
 </script>
 
