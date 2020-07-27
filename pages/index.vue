@@ -1,17 +1,20 @@
 <template>
-  <div class="storefront-container">
+  <div class="storefront-container flex flex-col">
+    <SearchBar />
     <FeaturedAppCarousel />
     <SpecialOffers />
   </div>
 </template>
 
 <script>
+import SearchBar from '~/components/storefront/search-bar'
 import FeaturedAppCarousel from '~/components/storefront/featured-apps-carousel'
 import SpecialOffers from '~/components/storefront/special-offers'
 
 export default {
   layout: 'storefront-layout',
   components: {
+    SearchBar,
     FeaturedAppCarousel,
     SpecialOffers,
   },
