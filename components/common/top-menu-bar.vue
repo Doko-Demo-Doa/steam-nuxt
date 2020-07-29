@@ -3,6 +3,8 @@
     <div v-for="item in menuItems" :key="item.id" class="menu-item">
       {{ item.name }}
     </div>
+
+    <div class="glowing-underline" />
   </div>
 </template>
 
@@ -23,14 +25,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.menu-item {
-  margin-right: 30px;
-  color: $color-gray;
-  cursor: pointer;
-  user-select: none;
-  text-transform: uppercase;
-  font-size: 1rem;
-  padding-bottom: 3px;
-  border-bottom: 2px solid $color-dark-teal;
+.top-menu-bar {
+  .menu-item {
+    margin-right: 30px;
+    color: $color-gray;
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding-bottom: 3px;
+    border-bottom: 2px solid $color-dark-teal;
+  }
+
+  .glowing-underline {
+    width: 100%;
+  }
 }
 </style>
