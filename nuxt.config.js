@@ -40,7 +40,14 @@ export default {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
+    // Icons
+    '@nuxtjs/fontawesome',
   ],
+  fontawesome: {
+    icons: {
+      solid: ['faCog', 'faSearch'],
+    },
+  },
   /*
    ** Nuxt.js modules
    */

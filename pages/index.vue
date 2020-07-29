@@ -30,5 +30,8 @@ export default {
 .storefront-container {
   height: 100%;
   background-color: $color-charcoal;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url('https://steamstore-a.akamaihd.net/public/images/v6/colored_body_top2.png?v=2');
 }
 </style>
