@@ -3,11 +3,11 @@
     class="featured-apps flex flex-col lg:flex-row items-center lg:justify-center"
   >
     <div class="custom-slide w-full">
-      <siema :options="flickityOptions">
-        <div v-for="item in carouselData" :key="item.id" class="carousel-cell">
-          <img :src="item.imageLink" />
-        </div>
-      </siema>
+      <VueSlickCarousel :arrows="true" :dots="true">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </VueSlickCarousel>
     </div>
 
     <div class="slide-meta flex flex-col lg:w-auto hover:bg-blue-500">
@@ -21,20 +21,23 @@
         </div>
       </div>
 
-      <button class="my-4 py-4 btn-buy bg-transparent rounded">
-        Buy Now
-      </button>
+      <button class="my-4 py-4 btn-buy bg-transparent rounded">Buy Now</button>
     </div>
   </div>
 </template>
 
 <script>
-// https://sainf.github.io/vue2siema/
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+
 const imageLink =
   'https://steamcdn-a.akamaihd.net/steam/apps/883710/ss_153bd5afa0b45e74b0242a3805dc29aab9f1685e.600x338.jpg?t=1556224097'
 const imageLink2 =
   'https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fred-dead-redemption-2%2Fspecial-edition%2FRDR2PC1339_EditionOverview_PC_Stadia_SE_V02-1920x1080-e67610cc2943654bab80d751fcf88a64dabc1b1a.jpg'
 export default {
+  components: {
+    VueSlickCarousel,
+  },
   data() {
     return {
       flickityOptions: {

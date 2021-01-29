@@ -1,18 +1,10 @@
 export default {
-  mode: 'universal',
-  /*
-   ** Headers of the page
-   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'steam-nuxt',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || '',
-      },
+      { hid: 'description', name: 'description', content: '' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -31,11 +23,15 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/vue2-siema.js', ssr: false }],
+  plugins: [],
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: true,
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
+    // https://go.nuxtjs.dev/typescript
+    '@nuxt/typescript-build',
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
@@ -51,7 +47,21 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa', '@nuxtjs/style-resources', 'nuxt-webfontloader'],
+  modules: [
+    // https://go.nuxtjs.dev/axios
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
+    'nuxt-webfontloader',
+  ],
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {},
+  // PWA module configuration: https://go.nuxtjs.dev/pwa
+  pwa: {
+    manifest: {
+      lang: 'en',
+    },
+  },
   styleResources: {
     scss: [
       'assets/css/colors.scss',
@@ -62,23 +72,7 @@ export default {
   /*
    ** Build configuration
    */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extractCSS: true,
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-        })
-      }
-    },
-  },
+  build: {},
   webfontloader: {
     google: {
       families: ['Google+Sans:400,700'],

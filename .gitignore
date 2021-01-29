@@ -92,3 +92,4 @@ sw.*
 # Lock files
 yarn.lock
 package-lock.json
+.vscode/
