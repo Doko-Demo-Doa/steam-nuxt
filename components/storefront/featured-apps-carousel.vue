@@ -3,7 +3,7 @@
     class="featured-apps flex flex-col lg:flex-row items-center lg:justify-center"
   >
     <div class="custom-slide w-full">
-      <VueSlickCarousel :arrows="true" :dots="true">
+      <VueSlickCarousel class="vue-slick" :arrows="false">
         <div>1</div>
         <div>2</div>
         <div>3</div>
@@ -74,6 +74,12 @@ export default {
     max-width: 600px;
     max-height: 337px;
     min-width: 400px;
+
+    .vue-slick {
+      width: 200px;
+      height: 150px;
+      background-color: white;
+    }
   }
 
   .slide-meta {
