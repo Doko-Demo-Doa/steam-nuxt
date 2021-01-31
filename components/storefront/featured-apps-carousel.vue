@@ -4,9 +4,15 @@
   >
     <div class="custom-slide w-full">
       <VueSlickCarousel class="vue-slick" :arrows="false">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+        <div
+          class="single-slide"
+          style="background-image: https://steamcdn-a.akamaihd.net/steam/apps/883710/ss_153bd5afa0b45e74b0242a3805dc29aab9f1685e.600x338.jpg?t=1556224097;"
+        />
+        <div>
+          <img
+            src="https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fred-dead-redemption-2%2Fspecial-edition%2FRDR2PC1339_EditionOverview_PC_Stadia_SE_V02-1920x1080-e67610cc2943654bab80d751fcf88a64dabc1b1a.jpg"
+          />
+        </div>
       </VueSlickCarousel>
     </div>
 
@@ -30,28 +36,12 @@
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 
-const imageLink =
-  'https://steamcdn-a.akamaihd.net/steam/apps/883710/ss_153bd5afa0b45e74b0242a3805dc29aab9f1685e.600x338.jpg?t=1556224097'
-const imageLink2 =
-  'https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fred-dead-redemption-2%2Fspecial-edition%2FRDR2PC1339_EditionOverview_PC_Stadia_SE_V02-1920x1080-e67610cc2943654bab80d751fcf88a64dabc1b1a.jpg'
 export default {
   components: {
     VueSlickCarousel,
   },
   data() {
-    return {
-      flickityOptions: {
-        initialIndex: 3,
-        prevNextButtons: false,
-        pageDots: false,
-        wrapAround: true,
-      },
-      carouselData: [
-        { id: 0, imageLink },
-        { id: 1, imageLink: imageLink2 },
-        { id: 2, imageLink },
-      ],
-    }
+    return {}
   },
   methods: {
     next() {
@@ -76,9 +66,14 @@ export default {
     min-width: 400px;
 
     .vue-slick {
-      width: 200px;
-      height: 150px;
+      max-width: 600px;
+      max-height: 337px;
+      min-width: 400px;
       background-color: white;
+
+      .single-slide {
+        user-select: none;
+      }
     }
   }
 
