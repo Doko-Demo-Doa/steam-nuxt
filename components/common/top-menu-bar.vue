@@ -1,5 +1,11 @@
 <template>
-  <div class="top-menu-bar flex flex-row">
+  <div class="top-menu-bar flex items-center justify-center items-center">
+    <img
+      alt="logo"
+      class="logo object-center"
+      src="@/assets/images/header-logo.png"
+    />
+
     <div v-for="item in menuItems" :key="item.id" class="menu-item">
       {{ item.name }}
     </div>
@@ -26,9 +32,16 @@ export default {
 
 <style lang="scss" scoped>
 .top-menu-bar {
+  height: 100%;
+
+  .logo {
+    height: 40px;
+  }
+
   .menu-item {
     margin-right: 30px;
     color: $color-gray;
+
     cursor: pointer;
     user-select: none;
     text-transform: uppercase;
@@ -38,7 +51,7 @@ export default {
   }
 
   .glowing-underline {
-    width: 100%;
+    // width: 100%;
   }
 }
 </style>
