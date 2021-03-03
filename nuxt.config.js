@@ -44,6 +44,12 @@ export default {
       solid: ['faCog', 'faSearch'],
     },
   },
+  // Tailwind CSS options
+  // https://tailwindcss.nuxtjs.org/options
+  // https://tailwindcss.com/docs/customizing-colors
+  tailwindcss: {
+    // Options
+  },
   /*
    ** Nuxt.js modules
    */
